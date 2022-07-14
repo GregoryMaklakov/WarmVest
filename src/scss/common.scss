@@ -1,0 +1,47 @@
+// Заголовки, общие БЄМ блоки и проче...
+
+.title {
+    font-weight: 700;
+    font-size: rem(70);
+    line-height: math.div( 78, 70);
+    color: #FFFFFF;
+    span {
+        color: $greenColor;
+    }
+}
+//======================================================================================================================
+.form {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    height: 76px;
+    //перестраиваем форму 
+    @media (max-width:$mobile){
+         flex-direction: column;
+         gap: 15px;
+    }
+    &__input {
+        background: #FFFFFF;
+        border-radius: 10px;
+        padding: 13px 350px 13px 25px;
+       @media (max-width:$mobile){
+        width: 100%;
+        padding: 13px 50px 13px 25px; 
+       }
+    }
+    &__button {
+        position: absolute;
+        top: 6px;
+        right: 6px;      
+        height: auto;  
+        padding: 13px 25px;
+        width: 163px;
+        height: 64px;
+        @media (max-width:$mobile){
+             position: relative; 
+             width: 100%;
+             right: 0;
+        }
+    }
+}
+//======================================================================================================================

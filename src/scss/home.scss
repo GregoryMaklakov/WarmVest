@@ -1,0 +1,107 @@
+//====================================================================================================
+.page {
+    &__main {
+    }
+    &__partners {
+    }
+}
+
+.main-block {
+    position: relative;
+    @include adaptiveValue("padding-top", 261, 220);
+    &__container {
+    }
+
+    &__content {
+        padding: rem(0) rem(20);
+       
+    }
+
+    &__title {
+        text-align: center;
+        @include adaptiveValue("font-size", 70, 48);
+    }
+
+    &__sub {
+        max-width: rem(725);
+        text-align: center;
+        margin: 0 auto;
+        @include adaptiveValue("margin-top", 70, 40);
+    }
+
+    &__form {
+        margin-top: rem(48);
+        display: flex;
+        justify-content: center;
+    }
+
+    &__icons {
+    }
+}
+.title {
+}
+.form {
+    &__input {
+    }
+
+    &__button {
+    }
+}
+.button {
+}
+//======================================= element- ICONS ===============================================
+.icons-main-block {
+   
+    &__item {
+        position: absolute;
+    }
+    &__item-1 {
+        left: 1299px;
+        top: 134px;
+    }
+    &__item-2 {
+        left: 387px;
+        top: 379px;
+    }
+    &__item-3 {
+        left: 150px;
+        top: 682px;
+    }
+    &__item-4 {
+        left: 553px;
+        top: 757px;
+    }
+    &__item-5 {
+        left: 1475px;
+        top: 419px;
+    }
+    &__item-6 {
+        left: 1738px;
+        top: 367px;
+    }
+    &__item-7 {
+        left: 1471px;
+        top: 776px;
+    }
+}
+
+//====================================================================================================
+
+//====================================================================================================
+
+.partners {
+    &__body {
+        margin-top: 200px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        @media (max-width:$mobile){
+             justify-content: center; 
+        }
+    }
+    &__item {
+        padding: rem(20);
+    }
+}
