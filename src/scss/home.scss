@@ -4,6 +4,8 @@
     }
     &__partners {
     }
+    &__works {
+    }
 }
 
 .main-block {
@@ -87,7 +89,7 @@
 
 //====================================================================================================
 
-//====================================================================================================
+//====================================section Partners============================================
 
 .partners {
     &__body {
@@ -105,3 +107,123 @@
         padding: rem(20);
     }
 }
+//====================================================================================================
+//============================================WORK======================================
+
+
+.works {
+    @include adaptiveValue("padding-top", 200, 100);
+    &__body {
+        display: flex;
+        flex-direction: row;
+        @include adaptiveValue("gap", 90, 30);
+        justify-content: space-between;
+        align-items: center;
+        @media (max-width:$pc){
+             padding: rem(0) rem(15); 
+        }
+        @media (max-width:$tablet){
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 50%;
+        row-gap: 48px;
+        padding: rem(0) rem(30);
+        //max-width: rem(574);
+        
+    }
+    &__title {
+        align-items: start;
+        @media (max-width:$mobile){
+             font-size: rem(45); 
+             text-align: center;
+        }
+    }
+    &__sub {
+        font-family: 'League Spartan';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 177%;
+        color: #FFFFFF;
+    }
+
+    &__block {
+
+    }
+
+    &__image {
+        width: 660px;
+        height: 604px;
+        position: relative;
+        &::before{
+            content:'';
+            position: absolute;
+            width: 750px;
+            height: 936px;
+            right: 0;
+            top: -166px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            @media (max-width:$mobile){
+                 display: none; 
+            }
+        }
+        img {
+            border-radius: 20px;
+            left: -50px;
+           @media (max-width:$tablet){
+               left: 0;
+           }
+        }
+    }
+}
+.block-items {
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+    &__descr {
+        display: flex;
+        font-display: column;
+  
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        @media (max-width:$mobile){
+             flex-direction: column; 
+        }
+    }
+}
+.item-block {
+    &__icon {
+    }
+    &__descr {
+        @media (max-width:$mobile){
+             text-align: center; 
+        }
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 22px;
+        color: #FFFFFF;
+    }
+    &__sub {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 180%;
+        color: #FFFFFF;
+    }
+}
+.-ibg {
+}
+
+
+//====================================================================================================
