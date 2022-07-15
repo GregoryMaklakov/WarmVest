@@ -4,32 +4,44 @@
 // Блок со спойлерами
 .spollers {
 	display: grid;
-	gap: 15px;
+	gap: 24px;
 }
 // Спойлер
 .spollers__item {
-	font-size: rem(20);
+	font-family: 'Spartan';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 177%;
+	color: #FFFFFF;
 }
 // Заголовок спойлера
 .spollers__title {
 	width: 100%;
 	cursor: default;
 	text-align: left;
-	border: 1px solid #eee;
-	padding: rem(10) rem(15);
-	border-radius: rem(5);
+	border: none;
+	background-color: rgba(255, 255, 255, 0.05);
+	padding: rem(24) rem(30);
+	border-radius: rem(10);
 	position: relative;
+	transition: all .5s ease 0s;
+	@media (any-hover: hover){
+		&:hover{
+			background-color: rgba(148, 180, 159, 0.3);
+		}
+	}
 	._spoller-init & {
 		cursor: pointer;
 		&::before,
 		&::after {
 			content: "";
 			position: absolute;
-			right: 10px;
+			right: 20px;
 			top: 50%;
-			background-color: #000;
+			background-color: $greenColor;
 			height: 2px;
-			width: 15px;
+			width: 12px;
 			transition: transform 0.5s ease 0s;
 		}
 		&::before {
@@ -84,6 +96,14 @@
 // Контент спойлера
 .spollers__body {
 	padding: rem(20);
-	border-radius: rem(5);
-	border: 1px solid #eee;
+	border-radius: rem(10);
+	border: none;
+	margin-top: rem(5);
+	background-color: rgba(255, 255, 255, 0.05);
+	font-family: 'Spartan';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 177%;
+	color: #FFFFFF;
 }
