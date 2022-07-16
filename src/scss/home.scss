@@ -16,18 +16,31 @@
 
 .main-block {
     position: relative;
-    @include adaptiveValue("padding-top", 261, 220);
     &__container {
+        position: relative;
     }
-
     &__content {
-        padding: rem(0) rem(20);
-       
+        @include adaptiveValue("padding-top", 250, 130);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        @media (max-width:$mobile){
+             margin-left: 10px; 
+             margin-right: 10px;
+        }
     }
 
     &__title {
+        max-width: rem(830);
         text-align: center;
         @include adaptiveValue("font-size", 70, 48);
+        @media (max-width:$mobile){
+            font-size: 38px;
+            line-height: 38px; 
+        }
+
     }
 
     &__sub {
@@ -36,27 +49,13 @@
         margin: 0 auto;
         @include adaptiveValue("margin-top", 70, 40);
     }
-
-    &__form {
-        margin-top: rem(48);
-        display: flex;
-        justify-content: center;
-    }
-
     &__icons {
     }
-}
-.title {
-}
-.form {
-    &__input {
+    &__form {
+        @include adaptiveValue("margin-top", 48, 28);
     }
+}
 
-    &__button {
-    }
-}
-.button {
-}
 //======================================= element- ICONS ===============================================
 .icons-main-block {
    

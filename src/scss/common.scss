@@ -11,37 +11,40 @@
 }
 //======================================================================================================================
 .form {
+    max-width: rem(533);
+    background-color: #FFFFFF;
+    border-radius: 10px;
     display: flex;
-    flex-direction: row;
+    padding: rem(6);
     position: relative;
-    height: 76px;
     //перестраиваем форму 
     @media (max-width:$mobile){
          flex-direction: column;
          gap: 15px;
     }
     &__input {
-        background: #FFFFFF;
-        border-radius: 10px;
-        padding: 13px 350px 13px 25px;
+        flex: 1 1 auto;
+        padding: rem(20);
+        color: #263238;
+        font-weight: 500;
+        &::placeholder {
+            color: #263238;
+        }
        @media (max-width:$mobile){
         width: 100%;
         padding: 13px 50px 13px 25px; 
        }
     }
-    &__button {
+    &__error {
         position: absolute;
-        top: 6px;
-        right: 6px;      
-        height: auto;  
-        padding: 13px 25px;
-        width: 163px;
-        height: 64px;
-        @media (max-width:$mobile){
-             position: relative; 
-             width: 100%;
-             right: 0;
-        }
+        top: 100%;
+        left: 0;
+        color: #CA4E79;
+        font-size: rem(16);
+        margin-top: rem(5);
+        padding-left: rem(10);
+    }
+    &__button {
     }
 }
 //======================================================================================================================
