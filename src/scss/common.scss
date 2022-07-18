@@ -17,6 +17,7 @@
     display: flex;
     padding: rem(6);
     position: relative;
+    z-index: 4;
     //перестраиваем форму 
     @media (max-width:$mobile){
          flex-direction: column;
