@@ -20,7 +20,6 @@
     &__info {
         max-width: rem(325);
     }
-
     &__logo {
         font-weight: 500;
         font-size: 22px;
@@ -73,6 +72,45 @@
         margin-bottom: rem(24);
     }
     &__phone {
+        transition: all .5s;
+        @media (any-hover: hover){
+            &:hover{
+                color: $greenColor;
+            }
+        }
+    }
+}
+//==================================  Foter bottom  ==============================================
+.footer {
+    &__bottom {
+        min-height: rem(126);
+        border-top:1px solid rgba(255, 255, 255, 0.42);
+        @include adaptiveValue("margin-top", 100, 60);
+    }
+}
+.bottom-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    @include adaptiveValue("padding-top", 56, 26);
+    &__rights {
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 13px;
+        @media (max-width:$mobile){
+            margin-right: rem(20);
+            margin-bottom: rem(20);
+        }
+    }
+    &__menu {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+    &__link {
         transition: all .5s;
         @media (any-hover: hover){
             &:hover{
