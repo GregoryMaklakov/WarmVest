@@ -402,7 +402,7 @@ body {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 5;
+  z-index: 6;
 }
 
 .header__container-big {
